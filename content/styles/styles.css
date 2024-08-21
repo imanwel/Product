@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  /* border: 2px solid black; */
+  /* width: 100vw; */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  /* width: 100%; */
+}
+.top {
+  display: flex;
+  height: 10%;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  width: 100vw;
+  padding: 10px;
+}
+.top h3 {
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+  text-decoration: underline;
+}
+#search {
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+.sign a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 8px;
+  border-radius: 10px;
+}
+.sign a:hover {
+  box-shadow: 0 2.5px 5px black;
+  /* scale: 5m; */
+}
+/* .search {
+  display: flex;
+} */
+.navBar {
+  display: flex;
+  justify-content: center;
+  /* gap: 20px; */
+  background-color: rgb(38, 33, 33);
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.navBar nav {
+  /* display: flex; */
+}
+.navBar ul {
+  width: 500px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 30px; */
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+section {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  padding: 10px;
+  justify-content: space-around;
+  height: 50vh;
+}
+.text {
+  font-size: 2rem;
+}
+section h2 {
+  font-family: "Kalnia Glaze", serif;
+  text-shadow: 0 2.5px 5px BLACK;
+
+  /* text-align: center; */
+}
+.fashionImg {
+  width: 40vw;
+  /* height: 200px; */
+  /* border: 1px solid black; */
+  /* background-color: rgb(14, 80, 102); */
+}
+.fashionImg img {
+  width: 100%;
+}
+.products {
+  display: flex;
+  /* border: 1px solid red; */
+  /* height: 100%; */
+  padding: 15px;
+}
+aside {
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-between;
+  padding: 15px;
+}
+aside button {
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 8px;
+  line-height: 35px;
+  box-shadow: 0 2.5px 5px black;
+}
+aside button:hover {
+  /* color: rgb(217, 192, 192); */
+  /* background-color: rgb(107, 82, 82); */
+  background-color: wheat;
+  color: rgb(56, 50, 50);
+}
+.itemView {
+  width: 65vw;
+  /* border: 1px solid rgb(75, 69, 69); */
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 2.5px 5px black;
+}
+.clothing,
+.bags,
+.shoes,
+.accessories {
+  /* visibility: hidden; */
+  display: none;
+  height: 50vh;
+  overflow: auto;
+}
+
+/* .arrangement {
+  display: none;
+  height: 50vh;
+  overflow: auto;
+  visibility: hidden;
+} */
+
+.item1,
+.item2 {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10px; */
+}
+.item1 img,
+.item2 img {
+  width: 70%;
+}
+.item1 p,
+.item2 p {
+  font-weight: bold;
+}
+.arrangement {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 10px;
+  width: 30%;
+}
+.arrangement a {
+  padding: 15px;
+  color: rgb(46, 41, 41);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  text-align: center;
+}
+.arrangement a:hover {
+  /* padding: 20px; */
+  box-shadow: 0 2.5px 5px black;
+  /* border: 1px solid black; */
+}
+
+/* form section */
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+  background-color: rgb(220, 220, 103);
+  height: 100vh;
+}
+.form {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0 2.5px 5px black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  /* position: absolute;
+  bottom: 80px;
+  left: 270px; */
+}
+.header {
+  padding: 15px;
+}
+.header h1 {
+  text-align: center;
+  color: rgb(90, 83, 83);
+}
+div.space {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+.empty {
+  color: red;
+  visibility: hidden;
+}
+.submitbtn {
+  display: flex;
+  justify-content: center;
+}
+.submitbtn button {
+  background-color: rgb(167, 154, 154);
+  color: white;
+  font-weight: bold;
+  width: 100px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+p {
+  font-size: 14px;
+}
+.invalid {
+  border-bottom: 2px solid red;
+}
+.valid {
+  border-bottom: 2px solid rgb(170, 235, 72);
+}
