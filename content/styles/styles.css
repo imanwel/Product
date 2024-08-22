@@ -141,10 +141,11 @@ aside button:hover {
   color: rgb(56, 50, 50);
 }
 .itemView {
+  padding: 20px;
   width: 65vw;
   /* border: 1px solid rgb(75, 69, 69); */
   border-radius: 15px;
-  background-color: white;
+  /* background-color: white; */
   box-shadow: 0 2.5px 5px black;
 }
 .clothing,
@@ -156,14 +157,6 @@ aside button:hover {
   height: 50vh;
   overflow: auto;
 }
-
-/* .arrangement {
-  display: none;
-  height: 50vh;
-  overflow: auto;
-  visibility: hidden;
-} */
-
 .item1,
 .item2 {
   padding: 10px;
@@ -180,11 +173,8 @@ aside button:hover {
   font-weight: bold;
 }
 .arrangement {
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   gap: 10px;
   width: 30%;
 }
@@ -201,7 +191,23 @@ aside button:hover {
 .arrangement a:hover {
   /* padding: 20px; */
   box-shadow: 0 2.5px 5px black;
-  /* border: 1px solid black; */
+  scale: 1.2;
+}
+.specifications {
+  border: 1px solid rgb(75, 69, 69);
+  height: 30vh;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* box-shadow: 0 2.5px 5px black; */
+  /* width: 65vw; */
+  border-radius: 15px;
+}
+.specifications h4 {
+  border-bottom: 1px solid black;
+  padding: 5px;
 }
 
 /* form section */
@@ -224,9 +230,6 @@ aside button:hover {
   justify-content: center;
   width: fit-content;
   height: fit-content;
-  /* position: absolute;
-  bottom: 80px;
-  left: 270px; */
 }
 .header {
   padding: 15px;
@@ -269,4 +272,31 @@ p {
 }
 .valid {
   border-bottom: 2px solid rgb(170, 235, 72);
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px;
+  gap: 10px;
+  background-color: black;
+  /* text-align: center; */
+  /* align-items: center; */
+}
+footer h3 {
+  color: rgb(225, 167, 20);
+}
+.note {
+  line-height: 1.5rem;
+  color: rgba(245, 245, 245, 0.587);
+}
+footer div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+footer a {
+  color: whitesmoke;
+  text-decoration: none;
 }
