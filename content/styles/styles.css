@@ -241,17 +241,20 @@ footer div {
   font-weight: bold;
 }
 footer a {
-  color: whitesmoke;
+  color: #dddddd;
   text-decoration: none;
 }
 .last {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin: 20px 0;
   font-size: 11px;
   letter-spacing: 1px;
 }
 .navBar nav button {
+  display: none;
+}
+.right {
   display: none;
 }
 
