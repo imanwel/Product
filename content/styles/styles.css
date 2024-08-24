@@ -449,6 +449,7 @@ footer a {
   }
   .specifications p {
     font-size: small;
+    line-height: 1.2rem;
   }
   footer {
     padding: 20px;
