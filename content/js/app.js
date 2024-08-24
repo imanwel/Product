@@ -55,7 +55,7 @@ btn.forEach((item) => {
     if (item !== document.querySelector("#accessoryOption")) {
       document.querySelector("#accessoryOption").style.backgroundColor =
         "#f3f3f3";
-      document.querySelector("#accessoryOption").style.color = "#black";
+      document.querySelector("#accessoryOption").style.color = "black";
     }
   }
 
