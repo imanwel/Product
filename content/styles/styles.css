@@ -327,7 +327,6 @@ footer a {
     align-items: flex-start;
   }
   .navBar .nav {
-    transition: 1.5s;
     background-color: rgb(45 46 49);
     width: 50vw;
     height: 100vh;
@@ -337,6 +336,7 @@ footer a {
     justify-content: flex-start;
     position: fixed;
     left: -295px;
+    transition: 1.5s;
   }
   .navBar .nav div {
     display: flex;
