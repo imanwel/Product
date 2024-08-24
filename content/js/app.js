@@ -5,6 +5,10 @@ const acceSsory = document.querySelector(".accessories");
 const btn = document.querySelectorAll("button");
 const itemView = document.querySelector("main");
 const arrangeValue = document.querySelector(".arrangement");
+let toggleBtn = document.querySelector("#toggle"),
+  closeNav = document.querySelector(".closeNav"),
+  navBar = document.querySelector(".navBar"),
+  nav = document.querySelector(".nav");
 
 console.log(itemView.children);
 
@@ -60,6 +64,18 @@ const addAction = (item, option) => {
 //   item.style.color = " black";
 //   item.style.backgroundColor = "wheat";
 // }
+
+toggleBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  navBar.style.left = "0";
+  nav.style.left = "0";
+  closeNav.style.backgroundColor = "transparent";
+  closeNav.style.color = "white";
+});
+closeNav.addEventListener("click", () => {
+  nav.style.left = "-295px";
+  navBar.style.left = "-700px";
+});
 
 console.log(btn);
 console.log(itemView.firstElementChild);
