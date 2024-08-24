@@ -447,6 +447,9 @@ footer a {
   .specifications {
     font-size: 14px;
   }
+  .specifications p {
+    font-size: small;
+  }
   footer {
     padding: 20px;
   }
