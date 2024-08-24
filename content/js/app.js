@@ -20,9 +20,6 @@ btn.forEach((item) => {
       baG.style.display = "none";
       shoe.style.display = "none";
       acceSsory.style.display = "none";
-      // if ((cloth.style.display = "none")) {
-      //   console.log("hello");
-      // }
     } else if (item === document.querySelector("#bagOption")) {
       addAction(item, baG);
       cloth.style.display = "none";
@@ -42,8 +39,24 @@ btn.forEach((item) => {
       item.style.color = " black";
       item.style.backgroundColor = "wheat";
     }
-    // item.style.color = " rgb(217, 192, 192)";
-    // item.style.backgroundColor = "rgb(107, 82, 82)";
+
+    if (item !== document.querySelector("#clothOption")) {
+      document.querySelector("#clothOption").style.backgroundColor = "#f3f3f3";
+      document.querySelector("#clothOption").style.color = "black";
+    }
+    if (item !== document.querySelector("#bagOption")) {
+      document.querySelector("#bagOption").style.backgroundColor = "#f3f3f3";
+      document.querySelector("#bagOption").style.color = "black";
+    }
+    if (item !== document.querySelector("#shoeOption")) {
+      document.querySelector("#shoeOption").style.backgroundColor = "#f3f3f3";
+      document.querySelector("#shoeOption").style.color = "black";
+    }
+    if (item !== document.querySelector("#accessoryOption")) {
+      document.querySelector("#accessoryOption").style.backgroundColor =
+        "#f3f3f3";
+      document.querySelector("#accessoryOption").style.color = "#black";
+    }
   }
 
   console.log(item);
