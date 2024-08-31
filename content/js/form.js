@@ -11,6 +11,10 @@ button.addEventListener("mouseleave", () => {
   button.style.backgroundColor = "gray";
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   timeOut(3000);
+// });
+
 form.addEventListener("submit", runSubmit);
 function runSubmit(e) {
   e.preventDefault();
@@ -88,8 +92,7 @@ function runSubmit(e) {
     validated.confirmPassword !== ""
   ) {
     saveInputsValue();
-    alert("Account successfully Created");
-    window.location.href = "http://127.0.0.1:5502/signIn.html";
+    timeOut(3000);
     // console.log("good");
   } else {
     console.log("not saved to storage");
@@ -105,6 +108,14 @@ function runSubmit(e) {
     details.push(loginDetails);
     localStorage.setItem("details", JSON.stringify(details));
   }
+}
+
+function timeOut(time) {
+  document.querySelector(".account-creation").style.display = "block";
+  setTimeout(() => {
+    document.querySelector(".account-creation").style.display = "none";
+    window.location.href = "http://127.0.0.1:5502/signIn.html";
+  }, time);
 }
 
 const validateSuccess = (val, errorMessage) => {

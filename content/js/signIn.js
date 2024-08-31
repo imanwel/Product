@@ -10,6 +10,13 @@ button.addEventListener("mouseleave", () => {
   button.style.backgroundColor = "gray";
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   timeOut(3000, "login successful");
+//   // setTimeout(() => {
+//   //   console.log("hello");
+//   // }, 2000);
+// });
+
 let validateSignIn = {
   email: "",
   password: "",
@@ -82,10 +89,19 @@ function signIn() {
     localStorage.getItem("details") === localStorage.getItem("signInDetails")
   ) {
     console.log("you're good to go");
-    window.location.href = "http://127.0.0.1:5502/";
+    timeOut(3000, "login successful");
   } else {
     console.log("there's error in your work");
   }
+}
+
+function timeOut(time, message) {
+  document.querySelector(".account-creation").style.display = "block";
+  document.querySelector(".account-creation").textContent = message;
+  setTimeout(() => {
+    document.querySelector(".account-creation").style.display = "none";
+    window.location.href = "http://127.0.0.1:5502/";
+  }, time);
 }
 
 console.log(localStorage.getItem("details"));

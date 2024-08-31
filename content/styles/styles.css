@@ -509,6 +509,18 @@ footer a {
 }
 .header {
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header small {
+  text-align: center;
+  color: black;
+  padding: 10px;
+  background-color: #4ed844;
+  font-size: 1rem;
+  display: none;
 }
 .header h1 {
   text-align: center;
