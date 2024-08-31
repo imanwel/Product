@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>membership</title>
+    <link rel="stylesheet" href="/content/styles/styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form class="form signIn">
+        <div class="header">
+          <h1>Login</h1>
+        </div>
+
+        <div id="userEmail signInEmail" class="space fields email">
+          <input
+            type="email"
+            class="formInput signInEmail"
+            placeholder="Email"
+          />
+          <small class="empty">error: incorrect email</small>
+        </div>
+
+        <div id="confirmPassword signInPassword" class="space fields pass">
+          <input
+            type="password"
+            class="formInput signInPassword"
+            placeholder="Password"
+          />
+          <small class="empty">error</small>
+        </div>
+
+        <div class="submitbtn"><button class="btn">Submit</button></div>
+        <p>Don't have an account? <a href="/form.html">Sign up</a> here</p>
+      </form>
+    </div>
+
+    <script src="/content/js/signIn.js"></script>
+  </body>
+</html>

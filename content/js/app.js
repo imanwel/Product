@@ -68,16 +68,6 @@ const addAction = (item, option) => {
   item.style.backgroundColor = "rgb(107, 82, 82)";
 };
 
-// const removeAction = (option, option,option) => {
-//   option.style.color = " rgb(56, 50, 50)";
-//   option.style.backgroundColor = "wheat";
-// };
-
-// if (){
-//   item.style.color = " black";
-//   item.style.backgroundColor = "wheat";
-// }
-
 toggleBtn.addEventListener("click", (e) => {
   e.preventDefault();
   navBar.style.left = "0";
