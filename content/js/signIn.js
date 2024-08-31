@@ -20,6 +20,10 @@ signInForm.addEventListener("submit", runLogin);
 function runLogin(e) {
   e.preventDefault();
 
+  let allInputs = document.querySelectorAll(".formInput");
+  let inputValues = Array.from(allInputs);
+  let [val1, val2] = inputValues;
+
   let inputFields = document.querySelectorAll(".fields");
   let theInputs = Array.from(inputFields);
 
@@ -30,7 +34,7 @@ function runLogin(e) {
         validateSignIn.email = "";
       } else {
         validateSuccess(item, item.lastElementChild);
-        validateSignIn.email = item.firstElementChild.value;
+        validateSignIn.email = val1.value;
         // signIn();
       }
     } else if (item.firstElementChild.classList.contains("signInPassword")) {
@@ -39,7 +43,7 @@ function runLogin(e) {
         validateSignIn.password = "";
       } else {
         validateSuccess(item, item.lastElementChild);
-        validateSignIn.password = item.firstElementChild.value;
+        validateSignIn.password = val2.value;
         // signIn();
       }
     }
@@ -49,6 +53,7 @@ function runLogin(e) {
     console.log(validateSignIn);
     signIn();
   }
+  console.log(val1.value);
 }
 
 const validateSuccess = (item, errorMessage) => {
@@ -81,10 +86,6 @@ function signIn() {
   } else {
     console.log("there's error in your work");
   }
-
-  // signInDetails.forEach((signDet, index) => {
-  //   console.log(index + ":" + signDet);
-  // });
 }
 
 console.log(localStorage.getItem("details"));

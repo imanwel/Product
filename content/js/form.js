@@ -16,8 +16,6 @@ function runSubmit(e) {
   e.preventDefault();
   let eachInput = Array.from(form.children);
 
-  // console.log(eachInput);
-
   let validated = {
     // firstname: "",
     // lastname: "",
@@ -77,8 +75,6 @@ function runSubmit(e) {
     }
   });
 
-  // console.log(validated);
-
   let loginDetails = {
     email: validated.email,
     password: validated.confirmPassword,
@@ -92,6 +88,8 @@ function runSubmit(e) {
     validated.confirmPassword !== ""
   ) {
     saveInputsValue();
+    alert("Account successfully Created");
+    window.location.href = "http://127.0.0.1:5502/signIn.html";
     // console.log("good");
   } else {
     console.log("not saved to storage");
