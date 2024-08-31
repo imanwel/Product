@@ -114,7 +114,7 @@ function timeOut(time) {
   document.querySelector(".account-creation").style.display = "block";
   setTimeout(() => {
     document.querySelector(".account-creation").style.display = "none";
-    window.location.href = "http://127.0.0.1:5502/signIn.html";
+    location.href = "http://127.0.0.1:5502/signIn.html";
   }, time);
 }
 

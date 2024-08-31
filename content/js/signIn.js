@@ -100,7 +100,7 @@ function timeOut(time, message) {
   document.querySelector(".account-creation").textContent = message;
   setTimeout(() => {
     document.querySelector(".account-creation").style.display = "none";
-    window.location.href = "http://127.0.0.1:5502/";
+    location.href = "http://127.0.0.1:5502/";
   }, time);
 }
 
