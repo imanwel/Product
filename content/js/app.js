@@ -10,7 +10,7 @@ let toggleBtn = document.querySelector("#toggle"),
   navBar = document.querySelector(".navBar"),
   nav = document.querySelector(".nav");
 
-console.log(itemView.children);
+// console.log(itemView.children);
 
 btn.forEach((item) => {
   item.addEventListener("click", cursorWork);
@@ -59,7 +59,7 @@ btn.forEach((item) => {
     }
   }
 
-  console.log(item);
+  // console.log(item);
 });
 
 const addAction = (item, option) => {
@@ -80,5 +80,5 @@ closeNav.addEventListener("click", () => {
   navBar.style.left = "-700px";
 });
 
-console.log(btn);
-console.log(itemView.firstElementChild);
+// console.log(btn);
+// console.log(itemView.firstElementChild);

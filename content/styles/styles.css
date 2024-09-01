@@ -100,7 +100,7 @@ section {
   align-items: center;
   padding: 10px;
   justify-content: space-around;
-  height: 50vh;
+  /* height: 50vh; */
 }
 .text {
   font-size: 2rem;
@@ -328,6 +328,9 @@ footer a {
     padding: 10px;
     color: black;
   }
+  .fa-magnifying-glass {
+    display: none;
+  }
   .reg {
     display: none;
   }
@@ -394,6 +397,9 @@ footer a {
     gap: 15px;
     height: fit-content;
     padding: 2rem;
+  }
+  section h2 {
+    font-size: 2rem;
   }
   .fashionImg {
     width: 100%;
@@ -549,7 +555,7 @@ input {
   font-weight: bold;
   width: 100px;
   padding: 5px;
-  border: 1px solid black;
+  border: none;
   border-radius: 5px;
 }
 form p {

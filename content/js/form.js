@@ -15,11 +15,22 @@ const validateSuccess = (val, errorMessage) => {
   val.firstElementChild.classList.remove("invalid");
   val.firstElementChild.classList.add("valid");
 };
+const validateLogin = (val, errorMessage) => {
+  errorMessage.style.visibility = "hidden";
+  val.firstElementChild.classList.remove("invalid");
+  val.firstElementChild.classList.remove("valid");
+};
 const validateError = (val, cautionMessage, errorMessage) => {
   errorMessage.style.visibility = "visible";
   errorMessage.textContent = cautionMessage;
   val.firstElementChild.classList.remove("valid");
   val.firstElementChild.classList.add("invalid");
+};
+const loginError = (val, cautionMessage, errorMessage) => {
+  errorMessage.style.visibility = "visible";
+  errorMessage.textContent = cautionMessage;
+  val.firstElementChild.classList.remove("valid");
+  val.firstElementChild.classList.remove("invalid");
 };
 
 form.addEventListener("submit", runSubmit);
@@ -142,19 +153,26 @@ function runLogin(e) {
   theInputs.forEach((item) => {
     if (item.firstElementChild.classList.contains("signInEmail")) {
       if (item.firstElementChild.value === "") {
-        validateError(item, "invalid email", item.lastElementChild);
+        loginError(item, "invalid email", item.lastElementChild);
         validateSignIn.email = "";
       } else {
-        validateSuccess(item, item.lastElementChild);
+        validateLogin(item, item.lastElementChild);
         validateSignIn.email = val1.value;
         // signIn();
       }
     } else if (item.firstElementChild.classList.contains("signInPassword")) {
       if (item.firstElementChild.value === "") {
-        validateError(item, "incorrect password", item.lastElementChild);
+        loginError(item, "incorrect password", item.lastElementChild);
+        validateSignIn.password = "";
+      } else if (item.firstElementChild.value.length <= 5) {
+        loginError(
+          item,
+          "password must not be less than 5",
+          item.lastElementChild
+        );
         validateSignIn.password = "";
       } else {
-        validateSuccess(item, item.lastElementChild);
+        validateLogin(item, item.lastElementChild);
         validateSignIn.password = val2.value;
         // signIn();
       }
@@ -165,7 +183,6 @@ function runLogin(e) {
     console.log(validateSignIn);
     saveInputsValue();
     signIn();
-    timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
   }
   console.log(val1.value);
 }
@@ -241,7 +258,9 @@ function signIn() {
     localStorage.getItem("details") === localStorage.getItem("signInDetails")
   ) {
     console.log("you're good to go");
+    timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
   } else {
+    invalidAccount(3000, "invalid account", "#d82020");
     console.log("there's error in your work");
   }
 }
@@ -260,6 +279,15 @@ function timeOut(time, message, location) {
     document.querySelector(".account-creation").style.display = "none";
     // window.location.href = "http://127.0.0.1:5502/";
     window.location.href = location;
+  }, time);
+}
+
+function invalidAccount(time, message, bColor) {
+  document.querySelector(".account-creation").style.display = "block";
+  document.querySelector(".account-creation").textContent = message;
+  document.querySelector(".account-creation").style.backgroundColor = bColor;
+  setTimeout(() => {
+    document.querySelector(".account-creation").style.display = "none";
   }, time);
 }
 
