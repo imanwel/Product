@@ -29,18 +29,18 @@ const validateError = (val, cautionMessage, errorMessage) => {
 
 form.addEventListener("submit", runSubmit);
 
+let validated = {
+  // firstname: "",
+  // lastname: "",
+  username: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+};
+
 function runSubmit(e) {
   e.preventDefault();
   let eachInput = Array.from(form.children);
-
-  let validated = {
-    // firstname: "",
-    // lastname: "",
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  };
 
   eachInput.forEach((val) => {
     if (val.id === "userName") {
@@ -92,11 +92,6 @@ function runSubmit(e) {
     }
   });
 
-  let loginDetails = {
-    email: validated.email,
-    password: validated.confirmPassword,
-  };
-
   if (
     // validated.firstname !== "" &&
     // validated.lastname !== "" &&
@@ -114,17 +109,22 @@ function runSubmit(e) {
   } else {
     console.log("not saved to storage");
   }
+}
 
-  function saveInputsValue() {
-    let details;
-    if (localStorage.getItem("details") === null) {
-      details = [];
-    } else {
-      details = JSON.parse(localStorage.getItem("details"));
-    }
-    details.push(loginDetails);
-    localStorage.setItem("details", JSON.stringify(details));
+function saveInputsValue() {
+  let loginDetails = {
+    email: validated.email,
+    password: validated.confirmPassword,
+  };
+
+  let details;
+  if (localStorage.getItem("details") === null) {
+    details = [];
+  } else {
+    details = JSON.parse(localStorage.getItem("details"));
   }
+  details.push(loginDetails);
+  localStorage.setItem("details", JSON.stringify(details));
 }
 
 signInForm.addEventListener("submit", runLogin);
@@ -182,6 +182,13 @@ function runLogin(e) {
 // }
 
 function signIn() {
+  let details;
+  if (localStorage.getItem("details") === null) {
+    details = [];
+  } else {
+    details = JSON.parse(localStorage.getItem("details"));
+  }
+
   let signInDetails;
   if (localStorage.getItem("signInDetails") === null) {
     signInDetails = [];
