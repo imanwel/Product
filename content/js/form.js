@@ -103,7 +103,7 @@ function runSubmit(e) {
     timeOut(
       3000,
       "Account created successfully",
-      "http://127.0.0.1:5502/signIn.html"
+      "https://product-two-weld.vercel.app/signIn.html"
     );
     // console.log("good");
   } else {
@@ -202,7 +202,7 @@ function signIn() {
     localStorage.getItem("details") === localStorage.getItem("signInDetails")
   ) {
     console.log("you're good to go");
-    timeOut(3000, "login successful", "http://127.0.0.1:5502/");
+    timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
   } else {
     console.log("there's error in your work");
   }
