@@ -10,11 +10,6 @@ button.addEventListener("mouseenter", () => {
 button.addEventListener("mouseleave", () => {
   button.style.backgroundColor = "gray";
 });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   timeOut(3000);
-// });
-
 const validateSuccess = (val, errorMessage) => {
   errorMessage.style.visibility = "hidden";
   val.firstElementChild.classList.remove("invalid");
@@ -37,10 +32,10 @@ let validated = {
   password: "",
   confirmPassword: "",
 };
+let eachInput = Array.from(form.children);
 
 function runSubmit(e) {
   e.preventDefault();
-  let eachInput = Array.from(form.children);
 
   eachInput.forEach((val) => {
     if (val.id === "userName") {
@@ -168,26 +163,70 @@ function runLogin(e) {
 
   if (validateSignIn.email !== "" && validateSignIn.password !== "") {
     console.log(validateSignIn);
+    saveInputsValue();
     signIn();
+    timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
   }
   console.log(val1.value);
 }
 
-// function timeOut(time) {
-//   document.querySelector(".account-creation").style.display = "block";
-//   setTimeout(() => {
-//     document.querySelector(".account-creation").style.display = "none";
-//     window.location.href = "http://127.0.0.1:5502/signIn.html";
-//   }, time);
-// }
-
 function signIn() {
-  let details;
-  if (localStorage.getItem("details") === null) {
-    details = [];
-  } else {
-    details = JSON.parse(localStorage.getItem("details"));
-  }
+  // let details;
+  // if (localStorage.getItem("details") === null) {
+  //   details = [];
+  // } else {
+  //   details = JSON.parse(localStorage.getItem("details"));
+  // }
+
+  eachInput.forEach((val) => {
+    if (val.id === "userName") {
+      if (val.firstElementChild.value === "") {
+        validateError(val, "enter your lastname", val.lastElementChild);
+        validated.username = "";
+      } else {
+        validateSuccess(val, val.lastElementChild);
+        validated.username = val.firstElementChild.value;
+      }
+    } else if (val.id === "userEmail") {
+      if (val.firstElementChild.value === "") {
+        validateError(val, "enter your email", val.lastElementChild);
+        validated.email = "";
+      } else {
+        validateSuccess(val, val.lastElementChild);
+        validated.email = val.firstElementChild.value;
+      }
+    } else if (val.id === "userPassword") {
+      if (val.firstElementChild.value === "") {
+        validateError(val, "create a password", val.lastElementChild);
+        validated.password = "";
+      } else if (val.firstElementChild.value.length <= 5) {
+        validateError(
+          val,
+          "password must not be less than 5",
+          val.lastElementChild
+        );
+        validated.password = "";
+      } else {
+        validateSuccess(val, val.lastElementChild);
+        validated.password = val.firstElementChild.value;
+      }
+    } else if (val.id === "confirmPassword") {
+      if (val.firstElementChild.value === "") {
+        validateError(val, "not match", val.lastElementChild);
+        validated.confirmPassword = "";
+      } else if (
+        val.firstElementChild.value !==
+        document.querySelector("#userPassword").firstElementChild.value
+      ) {
+        validateError(val, "password not match", val.lastElementChild);
+        validated.confirmPassword = "";
+      } else {
+        validateSuccess(val, val.lastElementChild);
+        validated.confirmPassword =
+          document.querySelector("#userPassword").firstElementChild.value;
+      }
+    }
+  });
 
   let signInDetails;
   if (localStorage.getItem("signInDetails") === null) {
@@ -202,11 +241,17 @@ function signIn() {
     localStorage.getItem("details") === localStorage.getItem("signInDetails")
   ) {
     console.log("you're good to go");
-    timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
   } else {
     console.log("there's error in your work");
   }
 }
+// function timeOut(time) {
+//   document.querySelector(".account-creation").style.display = "block";
+//   setTimeout(() => {
+//     document.querySelector(".account-creation").style.display = "none";
+//     window.location.href = "http://127.0.0.1:5502/signIn.html";
+//   }, time);
+// }
 
 function timeOut(time, message, location) {
   document.querySelector(".account-creation").style.display = "block";
