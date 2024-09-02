@@ -106,11 +106,6 @@ function runSubmit(e) {
     validated.confirmPassword !== ""
   ) {
     saveInputsValue();
-    // timeOut(
-    //   3000,
-    //   "Account created successfully",
-    //   "https://product-two-weld.vercel.app/signIn.html"
-    // );
     timeOut(2000, "Account created successfully", "/signIn.html");
     // console.log("good");
   } else {
@@ -158,8 +153,7 @@ function runLogin(e) {
         validateSignIn.email = "";
       } else {
         validateLogin(item, item.lastElementChild);
-        validateSignIn.email = val1.value;
-        // signIn();
+        validateSignIn.email = item.lastElementChild.value;
       }
     } else if (item.firstElementChild.classList.contains("signInPassword")) {
       if (item.firstElementChild.value === "") {
@@ -174,112 +168,41 @@ function runLogin(e) {
         validateSignIn.password = "";
       } else {
         validateLogin(item, item.lastElementChild);
-        validateSignIn.password = val2.value;
-        // signIn();
+        validateSignIn.password = item.lastElementChild.value;
       }
     }
   });
 
   if (validateSignIn.email !== "" && validateSignIn.password !== "") {
-    console.log(validateSignIn);
-    // saveInputsValue();
-    signIn();
+    signIn(val1.value, val2.value);
   }
-  console.log(val1.value);
+  // console.log(val1.value);
 }
 
-function signIn() {
-  // let details;
-  // if (localStorage.getItem("details") === null) {
-  //   details = [];
-  // } else {
-  //   details = JSON.parse(localStorage.getItem("details"));
-  // }
-
-  // eachInput.forEach((val) => {
-  //   if (val.id === "userName") {
-  //     if (val.firstElementChild.value === "") {
-  //       validateError(val, "enter your lastname", val.lastElementChild);
-  //       validated.username = "";
-  //     } else {
-  //       validateSuccess(val, val.lastElementChild);
-  //       validated.username = val.firstElementChild.value;
-  //     }
-  //   } else if (val.id === "userEmail") {
-  //     if (val.firstElementChild.value === "") {
-  //       validateError(val, "enter your email", val.lastElementChild);
-  //       validated.email = "";
-  //     } else {
-  //       validateSuccess(val, val.lastElementChild);
-  //       validated.email = val.firstElementChild.value;
-  //     }
-  //   } else if (val.id === "userPassword") {
-  //     if (val.firstElementChild.value === "") {
-  //       validateError(val, "create a password", val.lastElementChild);
-  //       validated.password = "";
-  //     } else if (val.firstElementChild.value.length <= 5) {
-  //       validateError(
-  //         val,
-  //         "password must not be less than 5",
-  //         val.lastElementChild
-  //       );
-  //       validated.password = "";
-  //     } else {
-  //       validateSuccess(val, val.lastElementChild);
-  //       validated.password = val.firstElementChild.value;
-  //     }
-  //   } else if (val.id === "confirmPassword") {
-  //     if (val.firstElementChild.value === "") {
-  //       validateError(val, "not match", val.lastElementChild);
-  //       validated.confirmPassword = "";
-  //     } else if (
-  //       val.firstElementChild.value !==
-  //       document.querySelector("#userPassword").firstElementChild.value
-  //     ) {
-  //       validateError(val, "password not match", val.lastElementChild);
-  //       validated.confirmPassword = "";
-  //     } else {
-  //       validateSuccess(val, val.lastElementChild);
-  //       validated.confirmPassword =
-  //         document.querySelector("#userPassword").firstElementChild.value;
-  //     }
-  //   }
-  // });
-
-  let signInDetails;
-  if (localStorage.getItem("signInDetails") === null) {
-    signInDetails = [];
+function signIn(email, password) {
+  let details;
+  if (localStorage.getItem("details") === null) {
+    details = [];
   } else {
-    signInDetails = JSON.parse(localStorage.getItem("signInDetails"));
+    details = JSON.parse(localStorage.getItem("details"));
   }
-  signInDetails.push(validateSignIn);
-  localStorage.setItem("signInDetails", JSON.stringify(signInDetails));
-
-  if (
-    localStorage.getItem("details") === localStorage.getItem("signInDetails")
-  ) {
-    console.log("you're good to go");
-    // timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
-    timeOut(2000, "login successful", "/index.html");
-  } else {
-    invalidAccount(2000, "invalid account", "#d82020");
-    console.log("there's error in your work");
-  }
+  details.forEach((info) => {
+    if (info.email === email && info.password === password) {
+      timeOut(2000, "login successful", "/index.html");
+      console.log("good");
+    } else {
+      invalidAccount(2000, "Account does not exist", "#f25d5d");
+      console.log("bad");
+    }
+  });
 }
-// function timeOut(time) {
-//   document.querySelector(".account-creation").style.display = "block";
-//   setTimeout(() => {
-//     document.querySelector(".account-creation").style.display = "none";
-//     window.location.href = "http://127.0.0.1:5502/signIn.html";
-//   }, time);
-// }
 
 function timeOut(time, message, location) {
   document.querySelector(".account-creation").style.display = "block";
   document.querySelector(".account-creation").textContent = message;
   setTimeout(() => {
     document.querySelector(".account-creation").style.display = "none";
-    // window.location.href = "http://127.0.0.1:5502/";
+
     window.document.location.href = location;
   }, time);
 }
@@ -293,4 +216,4 @@ function invalidAccount(time, message, bColor) {
   }, time);
 }
 
-console.log(localStorage.getItem("details"));
+// console.log(localStorage.getItem("details"));
