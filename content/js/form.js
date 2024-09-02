@@ -199,6 +199,7 @@ function signIn(email, password) {
 
 function timeOut(time, message, location) {
   document.querySelector(".account-creation").style.display = "block";
+  document.querySelector(".account-creation").style.backgroundColor = "#4ed844";
   document.querySelector(".account-creation").textContent = message;
   setTimeout(() => {
     document.querySelector(".account-creation").style.display = "none";
