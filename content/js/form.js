@@ -264,7 +264,7 @@ function signIn() {
   ) {
     console.log("you're good to go");
     // timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
-    timeOut(2000, "login successful", "http://127.0.0.1:5502/");
+    timeOut(2000, "login successful", "index.html");
   } else {
     invalidAccount(2000, "invalid account", "#d82020");
     console.log("there's error in your work");
@@ -284,7 +284,7 @@ function timeOut(time, message, location) {
   setTimeout(() => {
     document.querySelector(".account-creation").style.display = "none";
     // window.location.href = "http://127.0.0.1:5502/";
-    window.location.href = location;
+    window.document.location.href = location;
   }, time);
 }
 
