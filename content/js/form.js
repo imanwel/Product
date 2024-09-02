@@ -266,7 +266,7 @@ function signIn() {
     // timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
     timeOut(2000, "login successful", "http://127.0.0.1:5502/");
   } else {
-    invalidAccount(2000, "Account does not exist", "#d82020");
+    invalidAccount(2000, "invalid account", "#d82020");
     console.log("there's error in your work");
   }
 }
