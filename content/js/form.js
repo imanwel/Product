@@ -111,11 +111,7 @@ function runSubmit(e) {
     //   "Account created successfully",
     //   "https://product-two-weld.vercel.app/signIn.html"
     // );
-    timeOut(
-      2000,
-      "Account created successfully",
-      "http://127.0.0.1:5502/signIn.html"
-    );
+    timeOut(2000, "Account created successfully", "/signIn.html");
     // console.log("good");
   } else {
     console.log("not saved to storage");
@@ -264,7 +260,7 @@ function signIn() {
   ) {
     console.log("you're good to go");
     // timeOut(3000, "login successful", "https://product-two-weld.vercel.app/");
-    timeOut(2000, "login successful", "index.html");
+    timeOut(2000, "login successful", "/index.html");
   } else {
     invalidAccount(2000, "invalid account", "#d82020");
     console.log("there's error in your work");
