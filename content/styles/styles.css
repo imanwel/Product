@@ -11,6 +11,51 @@
   justify-content: center;
   align-items: center;
 }
+.pop-up {
+  /* border: 1px solid red; */
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+.welcome-message {
+  /* border: 1px solid green; */
+  border-radius: 20px;
+  width: 65vw;
+  /* height: 35vh; */
+  color: #332525;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  gap: 20px;
+  font-family: "Dancing Script", cursive;
+}
+.welcome {
+  font-weight: bold;
+  /* color: #550000; */
+}
+.msg {
+  line-height: 25px;
+}
+.wlcm-btn {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 3px;
+  background-color: #1212ffcc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
 .wrapper {
   /* border: 1px solid green; */
   display: flex;
@@ -339,6 +384,7 @@ footer a {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.527);
+    backdrop-filter: blur(1px);
     border-radius: 0;
     position: fixed;
     top: 0;
@@ -348,7 +394,7 @@ footer a {
   }
   .navBar .nav {
     background-color: rgb(45 46 49);
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
     flex-direction: column;
     gap: 25px;
@@ -364,9 +410,6 @@ footer a {
     justify-content: space-between;
     align-items: center;
   }
-  /* .i-1 {
-    width: 100px;
-  } */
   .navBar .nav button {
     display: block;
     padding: 10px;
@@ -490,6 +533,9 @@ footer a {
   .note {
     font-size: small;
   }
+  .welcome-message {
+    font-size: small;
+  }
 }
 
 /* form section */
@@ -497,21 +543,19 @@ footer a {
 .main {
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  align-items: center;
   background-color: rgb(220, 220, 103);
   height: 100vh;
 }
-.form {
+form {
   background-color: white;
-  border: 1px solid black;
   box-shadow: 0 2.5px 5px black;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 30px;
   justify-content: center;
-  width: fit-content;
-  height: fit-content;
+  margin: 25px;
 }
 .header {
   padding: 15px;

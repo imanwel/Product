@@ -10,7 +10,13 @@ let toggleBtn = document.querySelector("#toggle"),
   navBar = document.querySelector(".navBar"),
   nav = document.querySelector(".nav");
 
-// console.log(itemView.children);
+function eventListeners() {
+  document.querySelector(".wlcm-btn").addEventListener("click", openPage);
+  toggleBtn.addEventListener("click", navMenu);
+}
+function openPage() {
+  document.querySelector(".pop-up").style.display = "none";
+}
 
 btn.forEach((item) => {
   item.addEventListener("click", cursorWork);
@@ -68,13 +74,14 @@ const addAction = (item, option) => {
   item.style.backgroundColor = "rgb(107, 82, 82)";
 };
 
-toggleBtn.addEventListener("click", (e) => {
+function navMenu(e) {
   e.preventDefault();
   navBar.style.left = "0";
   nav.style.left = "0";
   closeNav.style.backgroundColor = "transparent";
   closeNav.style.color = "white";
-});
+}
+
 closeNav.addEventListener("click", () => {
   nav.style.left = "-295px";
   navBar.style.left = "-700px";
@@ -82,3 +89,5 @@ closeNav.addEventListener("click", () => {
 
 // console.log(btn);
 // console.log(itemView.firstElementChild);
+
+eventListeners();
