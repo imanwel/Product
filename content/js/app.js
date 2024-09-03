@@ -11,7 +11,8 @@ let toggleBtn = document.querySelector("#toggle"),
   nav = document.querySelector(".nav");
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".wrapper").classList.add("scroll-stop");
+  // document.querySelector(".wrapper").classList.add("scroll-stop");
+  document.querySelector("body").style.overflow = "hidden";
 });
 function eventListeners() {
   document.querySelector(".wlcm-btn").addEventListener("click", openPage);
@@ -19,7 +20,8 @@ function eventListeners() {
 }
 function openPage() {
   document.querySelector(".pop-up").style.display = "none";
-  document.querySelector(".wrapper").classList.remove("scroll-stop");
+  // document.querySelector(".wrapper").classList.remove("scroll-stop");
+  document.querySelector("body").style.overflow = "auto";
 }
 
 btn.forEach((item) => {
@@ -84,13 +86,15 @@ function navMenu(e) {
   nav.style.left = "0";
   closeNav.style.backgroundColor = "transparent";
   closeNav.style.color = "white";
-  document.querySelector(".wrapper").classList.add("scroll-stop");
+  // document.querySelector(".wrapper").classList.add("scroll-stop");
+  document.querySelector("body").style.overflow = "hidden";
 }
 
 closeNav.addEventListener("click", () => {
   nav.style.left = "-295px";
   navBar.style.left = "-700px";
-  document.querySelector(".wrapper").classList.remove("scroll-stop");
+  // document.querySelector(".wrapper").classList.remove("scroll-stop");
+  document.querySelector("body").style.overflow = "auto";
 });
 
 // console.log(btn);
