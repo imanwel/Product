@@ -305,6 +305,10 @@ footer a {
 .right {
   display: none;
 }
+.scroll-stop {
+  height: 100vh;
+  overflow: hidden;
+}
 
 @media (max-width: 850px) {
   .container {

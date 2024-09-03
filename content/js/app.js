@@ -10,12 +10,16 @@ let toggleBtn = document.querySelector("#toggle"),
   navBar = document.querySelector(".navBar"),
   nav = document.querySelector(".nav");
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".wrapper").classList.add("scroll-stop");
+});
 function eventListeners() {
   document.querySelector(".wlcm-btn").addEventListener("click", openPage);
   toggleBtn.addEventListener("click", navMenu);
 }
 function openPage() {
   document.querySelector(".pop-up").style.display = "none";
+  document.querySelector(".wrapper").classList.remove("scroll-stop");
 }
 
 btn.forEach((item) => {
@@ -80,11 +84,13 @@ function navMenu(e) {
   nav.style.left = "0";
   closeNav.style.backgroundColor = "transparent";
   closeNav.style.color = "white";
+  document.querySelector(".wrapper").classList.add("scroll-stop");
 }
 
 closeNav.addEventListener("click", () => {
   nav.style.left = "-295px";
   navBar.style.left = "-700px";
+  document.querySelector(".wrapper").classList.remove("scroll-stop");
 });
 
 // console.log(btn);
