@@ -306,7 +306,7 @@ footer a {
   display: none;
 }
 .scroll-stop {
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
