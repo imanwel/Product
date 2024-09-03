@@ -545,6 +545,11 @@ footer a {
       sans-serif;
   }
 }
+@media (max-width: 360px) {
+  .text h2 {
+    font-size: 30px;
+  }
+}
 
 /* form section */
 
