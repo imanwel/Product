@@ -215,7 +215,7 @@ section h2 {
 .products {
   display: flex;
   padding: 15px;
-  height: 60vh;
+  height: 100%;
 }
 aside {
   width: 30vw;
@@ -248,7 +248,7 @@ aside button:hover {
   width: 65vw;
   /* border: 1px solid rgb(75, 69, 69); */
   border-radius: 15px;
-  /* background-color: white; */
+  background-color: rgb(213 213 213);
   box-shadow: 0 2.5px 5px black;
   overflow: auto;
 }
@@ -260,7 +260,6 @@ aside button:hover {
   display: none;
   height: 100%;
   overflow: auto;
-  background-color: rgb(213 213 213);
 }
 .item1,
 .item2 {
@@ -336,6 +335,11 @@ aside button:hover {
   gap: 20px;
   align-items: center;
 }
+.view-section a {
+  text-decoration: none;
+  color: white;
+}
+
 #view-section .img-collect {
   /* border: 1px solid red; */
   overflow: hidden;
