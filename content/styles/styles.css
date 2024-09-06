@@ -191,7 +191,7 @@ section h2 {
   /* text-align: center; */
 }
 .write-up {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -340,9 +340,11 @@ aside button:hover {
   /* border: 1px solid red; */
   overflow: hidden;
   width: 100%;
+  height: 80vh;
 }
 #view-section .img-collect img {
   width: 100%;
+  height: 100%;
 }
 #view-section button {
   font-weight: bold;
@@ -433,14 +435,12 @@ footer a {
   }
   .top {
     display: flex;
-    /* justify-content: space-between; */
     gap: 100px;
   }
   .top h3 {
     font-size: 2rem;
   }
   .search {
-    /* visibility: visible; */
     width: 195xpx;
   }
   #search {
@@ -451,7 +451,6 @@ footer a {
   }
   aside {
     gap: 0;
-    /* justify-content: space-between; */
   }
   aside button {
     font-size: 25px;
@@ -578,6 +577,9 @@ footer a {
     /* display: block; */
     flex-direction: column;
     /* gap: 20px; */
+  }
+  #view-section .img-collect {
+    height: 50vh;
   }
   .item1,
   .item2 {
