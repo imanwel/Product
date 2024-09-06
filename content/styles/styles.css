@@ -663,7 +663,8 @@ footer a {
   .welcome-message {
     font-size: small;
   }
-  .welcome-message p {
+  .welcome-message p,
+  .write-up p {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
   }

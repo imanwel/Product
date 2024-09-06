@@ -16,6 +16,7 @@ let toggleBtn = document.querySelector("#toggle"),
 //   }
 //   // document.querySelector("body").style.overflow = "hidden";
 // });
+
 function eventListeners() {
   document.querySelector(".wlcm-btn").addEventListener("click", openPage);
   toggleBtn.addEventListener("click", navMenu);
@@ -95,14 +96,6 @@ closeNav.addEventListener("click", () => {
 });
 
 arrangeValue.forEach((item, index) => {
-  // item.addEventListener("mouseenter", (e) => {
-  //   // item.style.border = "1px solid black";
-  //   item.style.scale = "0.5";
-  // });
-  // item.addEventListener("mouseleave", (e) => {
-  //   // item.style.border = "none";
-  //   item.style.scale = "none";
-  // });
   item.addEventListener("click", (e) => {
     e.preventDefault();
     item.classList.add("shadow");
