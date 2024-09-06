@@ -14,6 +14,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <div class="container">
       <div class="pop-up">
@@ -39,6 +40,9 @@
             <input type="search" id="search" placeholder="i'm shopping for" />
           </div>
           <div class="sign">
+            <div class="cart">
+              <a href="#" class="reg">Cart: <span class="count">0</span></a>
+            </div>
             <a href="/form.html" class="reg">Login/Register</a>
             <span class="right">
               <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -64,257 +68,381 @@
         </div>
 
         <div class="mainSection">
-          <section>
-            <div class="text"><h2>Be elegant with a style</h2></div>
-            <div class="fashionImg">
-              <img
-                src="https://audaces.com/wp-content/uploads/2020/08/fashion-styles.webp"
-                alt=""
-              />
+          <div class="select">
+            <section>
+              <div class="text"><h2>Be elegant with a style</h2></div>
+              <div class="fashionImg">
+                <img
+                  src="https://audaces.com/wp-content/uploads/2020/08/fashion-styles.webp"
+                  alt=""
+                />
+              </div>
+            </section>
+
+            <!-- <div class="write-up">
+              <p class="">
+                Welcome to our Fashion collection, where style meets substance.
+                Whether you're looking for timeless classics or cutting-edge
+                trends, our curated selection is designed to elevate every man's
+                wardrobe. From sleek tailored suits to casual streetwear
+                essentials, we offer versatile pieces that blend comfort,
+                functionality, and refined craftsmanship.
+              </p>
+              <p>
+                Explore a range of clothing, shoes, and accessories that embody
+                confidence and individuality. Whether you're dressing for a
+                formal occasion or keeping it casual, our collections are built
+                to help you express your unique style with sophistication and
+                ease.
+              </p>
+            </div> -->
+
+            <div class="products">
+              <aside>
+                <button id="clothOption">Clothing</button>
+                <button id="bagOption">Bags</button>
+                <button id="shoeOption">Shoes</button>
+                <button id="accessoryOption">Accessories</button>
+              </aside>
+
+              <main class="itemView">
+                <div class="clothing">
+                  <div class="item1">
+                    <div class="arrangement">
+                      <a href="#" class="Tshirt1">
+                        <img src="content/images/clothImg/Tshirt1.jpg" alt="" />
+                        <p>T-Shirts + Shorts Set - White</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>8,950</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="hoodie">
+                        <img src="content/images/clothImg/hoodie.jpg" alt="" />
+                        <p>El-vin Brown Sweatshirt</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>15,500</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="jacket">
+                        <img src="content/images/clothImg/jacket.jpg" alt="" />
+                        <p>Varsity Jacket With Joggers</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>30,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="item2">
+                    <div class="arrangement">
+                      <a href="#" class="joggers">
+                        <img src="content/images/clothImg/joggers.jpg" alt="" />
+                        <p>
+                          Sweat Shirt x Joggers
+                          <!--Long Sleeves-->
+                        </p>
+                        <p><i class="fa-solid fa-naira-sign"></i>27,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="sleeve">
+                        <img src="content/images/clothImg/sleeve.jpg" alt="" />
+                        <p>ZAFUL Shirt</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>25,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="Tshirt2">
+                        <img src="content/images/clothImg/Tshirt2.jpg" alt="" />
+                        <p>2 In 1 Short Sleeve Set</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>18,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="bags">
+                  <div class="item1">
+                    <div class="arrangement">
+                      <a href="#" class="Bag1">
+                        <img src="content/images/bagImg/bag1.jpg" alt="" />
+                        <p>4 PCS Women Bags - Green</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>13,999</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="Bag2">
+                        <img src="content/images/bagImg/bag2.jpg" alt="" />
+                        <p>3 PCS Women Ladies Handbags- Black</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>8,990</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="Bag3">
+                        <img src="content/images/bagImg/bag3.jpg" alt="" />
+                        <p>Bags Men Backpacks - Black</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>10,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="item2">
+                    <div class="arrangement">
+                      <a href="#" class="Bag4">
+                        <img src="content/images/bagImg/bag4.jpg" alt="" />
+                        <p>Ladies Purse Shoulder Bags</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>8,999</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="shoes">
+                  <div class="item1">
+                    <div class="arrangement">
+                      <a href="#" class="sneaker1">
+                        <img src="content/images/shoeImg/sneaker1.jpg" alt="" />
+                        <p>Men's Casual Sneakers - Brown</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>23,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="sneaker2">
+                        <img src="content/images/shoeImg/sneaker2.jpg" alt="" />
+                        <p>Men's Loafers Shoes - Blue</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>22,500</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="sneaker3">
+                        <img src="content/images/shoeImg/sneaker3.jpg" alt="" />
+                        <p>Men's Microfiber Leather Sneakers</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>21,500</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="item2">
+                    <div class="arrangement">
+                      <a href="#" class="black1">
+                        <img
+                          src="content/images/shoeImg/blackShoe1.jpg"
+                          alt=""
+                        />
+                        <p>Men's Outdoor Shoes - Black</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>19,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="black2">
+                        <img
+                          src="content/images/shoeImg/blackShoe2.jpg"
+                          alt=""
+                        />
+                        <p>British Style Boots - Black</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>32,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="boot">
+                        <img src="content/images/shoeImg/boot.jpg" alt="" />
+                        <p>High Top Martin Boots - Black</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>33,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="accessories">
+                  <div class="item1">
+                    <div class="arrangement">
+                      <a href="#" class="watch">
+                        <img
+                          src="content/images/accessoryImg/watch1.jpg"
+                          alt=""
+                        />
+                        <p>
+                          Large Dial Quartz Watch
+                          <!--Sports Watch Silicone Strap-->
+                        </p>
+                        <p><i class="fa-solid fa-naira-sign"></i>9,150</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="pendant">
+                        <img
+                          src="content/images/accessoryImg/pendant.jpg"
+                          alt=""
+                        />
+                        <p>
+                          Smiling Face Pendant Necklace
+                          <!--Titanium Steel-->
+                        </p>
+                        <p><i class="fa-solid fa-naira-sign"></i>2,500</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="cap">
+                        <img
+                          src="content/images/accessoryImg/cap1.jpg"
+                          alt=""
+                        />
+                        <p>5 Pieces Unisex Face Caps</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>10,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="item2">
+                    <div class="arrangement">
+                      <a href="#" class="belt">
+                        <img
+                          src="content/images/accessoryImg/belt.jpg"
+                          alt=""
+                        />
+                        <p>Men 2 In 1 Brown And Black Belt</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>13,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="glass">
+                        <img
+                          src="content/images/accessoryImg/glass.jpg"
+                          alt=""
+                        />
+                        <p>
+                          Protective Screen Glasses
+                          <!--Unisex Anti Blue Light-->
+                        </p>
+                        <p><i class="fa-solid fa-naira-sign"></i>5,000</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+
+                    <div class="arrangement">
+                      <a href="#" class="socks">
+                        <img
+                          src="content/images/accessoryImg/socks.jpg"
+                          alt=""
+                        />
+                        <p>3 Pairs Socks + 1 Free Face Towe1</p>
+                        <p><i class="fa-solid fa-naira-sign"></i>3,500</p>
+                        <button class="add">ADD TO CART</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </main>
             </div>
-          </section>
-
-          <div class="products">
-            <aside>
-              <button id="clothOption">Clothing</button>
-              <button id="bagOption">Bags</button>
-              <button id="shoeOption">Shoes</button>
-              <button id="accessoryOption">Accessories</button>
-            </aside>
-
-            <main class="itemView">
-              <div class="clothing">
-                <div class="item1">
-                  <div class="arrangement">
-                    <a href="#" class="Tshirt1">
-                      <img src="content/images/clothImg/Tshirt1.jpg" alt="" />
-                      <p>T-Shirts + Shorts Short Sleeve Set - White</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>8,950</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="hoodie">
-                      <img src="content/images/clothImg/hoodie.jpg" alt="" />
-                      <p>El-vin Brown Sweatshirt</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>15,500</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="jacket">
-                      <img src="content/images/clothImg/jacket.jpg" alt="" />
-                      <p>White/Black Varsity Jacket With Joggers</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>30,000</p>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="item2">
-                  <div class="arrangement">
-                    <a href="#" class="joggers">
-                      <img src="content/images/clothImg/joggers.jpg" alt="" />
-                      <p>
-                        Thermal Lined Color Spliced Long Sleeves Sweat Shirt x
-                        Joggers
-                      </p>
-                      <p><i class="fa-solid fa-naira-sign"></i>27,000</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="sleeve">
-                      <img src="content/images/clothImg/sleeve.jpg" alt="" />
-                      <p>ZAFUL Color Spliced Long Sleeves Shirt</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>25,000</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="Tshirt2">
-                      <img src="content/images/clothImg/Tshirt2.jpg" alt="" />
-                      <p>
-                        Men's 2 In 1 Short Sleeve T-Shirt & Shorts Set - White
-                      </p>
-                      <p><i class="fa-solid fa-naira-sign"></i>18,000</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="bags">
-                <div class="item1">
-                  <div class="arrangement">
-                    <a href="#" class="Bag1">
-                      <img src="content/images/bagImg/bag1.jpg" alt="" />
-                      <p>Share this product 4 PCS Women Bags - Green</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>13,999</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="Bag2">
-                      <img src="content/images/bagImg/bag2.jpg" alt="" />
-                      <p>3 PCS Women Bags Handbags Ladies Bags - Black</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>8,990</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="Bag3">
-                      <img src="content/images/bagImg/bag3.jpg" alt="" />
-                      <p>Bags Men Backpacks - Black</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>10,000</p>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="item2">
-                  <div class="arrangement">
-                    <a href="#" class="Bag4">
-                      <img src="content/images/bagImg/bag4.jpg" alt="" />
-                      <p>Women Bags Ladies Bags Handbags Purse Shoulder Bags</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>8,999</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="shoes">
-                <div class="item1">
-                  <div class="arrangement">
-                    <a href="#" class="sneaker1">
-                      <img src="content/images/shoeImg/sneaker1.jpg" alt="" />
-                      <p>Men's Casual Lace-Up Sneakers Canvas - Brown</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>23,000</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="sneaker2">
-                      <img src="content/images/shoeImg/sneaker2.jpg" alt="" />
-                      <p>Men's Lace up Business Oxford Loafers Shoes - Blue</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>22,500</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="sneaker3">
-                      <img src="content/images/shoeImg/sneaker3.jpg" alt="" />
-                      <p>
-                        Men's Lace Up Microfiber Leather Breathable Sneakers -
-                        Navy Blue
-                      </p>
-                      <p><i class="fa-solid fa-naira-sign"></i>21,500</p>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="item2">
-                  <div class="arrangement">
-                    <a href="#" class="black1">
-                      <img src="content/images/shoeImg/blackShoe1.jpg" alt="" />
-                      <p>Men's Comfortable Outdoor Shoes Leather - Black</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>19,000</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="black2">
-                      <img src="content/images/shoeImg/blackShoe2.jpg" alt="" />
-                      <p>
-                        Luxury British Style Leather & Elasticated Chelsea Boots
-                        - Black
-                      </p>
-                      <p><i class="fa-solid fa-naira-sign"></i>32,000</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="boot">
-                      <img src="content/images/shoeImg/boot.jpg" alt="" />
-                      <p>
-                        Men's High Top Martin Boots Outdoor Workwear Shoe -
-                        Black
-                      </p>
-                      <p><i class="fa-solid fa-naira-sign"></i>33,000</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="accessories">
-                <div class="item1">
-                  <div class="arrangement">
-                    <a href="#" class="watch">
-                      <img
-                        src="content/images/accessoryImg/watch1.jpg"
-                        alt=""
-                      />
-                      <p>Large Dial Sports Watch Silicone Strap Quartz Watch</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>9,150</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="pendant">
-                      <img
-                        src="content/images/accessoryImg/pendant.jpg"
-                        alt=""
-                      />
-                      <p>Titanium Steel Simple Smiling Face Pendant Necklace</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>2,500</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="cap">
-                      <img src="content/images/accessoryImg/cap1.jpg" alt="" />
-                      <p>5 Pieces Unisex Face Caps</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>10,000</p>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="item2">
-                  <div class="arrangement">
-                    <a href="#" class="belt">
-                      <img src="content/images/accessoryImg/belt.jpg" alt="" />
-                      <p>Men Genuine Leather Belt 2 In 1 Brown And Black</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>13,000</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="glass">
-                      <img src="content/images/accessoryImg/glass.jpg" alt="" />
-                      <p>
-                        Unisex Anti Blue Light Protective Computer Screen
-                        Glasses
-                      </p>
-                      <p><i class="fa-solid fa-naira-sign"></i>5,000</p>
-                    </a>
-                  </div>
-
-                  <div class="arrangement">
-                    <a href="#" class="socks">
-                      <img src="content/images/accessoryImg/socks.jpg" alt="" />
-                      <p>3 Pairs Men Socks + 1 Free Face Towe1</p>
-                      <p><i class="fa-solid fa-naira-sign"></i>3,500</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </main>
+            <div class="specifications">
+              <h4>Product specifications</h4>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Suscipit quas doloremque vero sapiente quod mollitia dolor illum
+                voluptatum possimus voluptatibus aspernatur quidem, sequi,
+                quisquam commodi eos, quis quaerat modi minima. Deserunt dolores
+                laudantium assumenda ut in tempore. Ducimus cum eum iure dolorem
+                voluptatem ipsum modi, nisi, porro illo quam asperiores totam
+                laboriosam. Quos dignissimos maiores illum expedita illo
+                suscipit atque.
+              </p>
+            </div>
           </div>
-          <div class="specifications">
-            <h4>Product specifications</h4>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
-              quas doloremque vero sapiente quod mollitia dolor illum voluptatum
-              possimus voluptatibus aspernatur quidem, sequi, quisquam commodi
-              eos, quis quaerat modi minima. Deserunt dolores laudantium
-              assumenda ut in tempore. Ducimus cum eum iure dolorem voluptatem
-              ipsum modi, nisi, porro illo quam asperiores totam laboriosam.
-              Quos dignissimos maiores illum expedita illo suscipit atque.
-            </p>
+
+          <div class="view-section">
+            <div id="view-section" class="">
+              <div class="write-up">
+                <p class="">
+                  Welcome to our Fashion collection, where style meets
+                  substance. Whether you're looking for timeless classics or
+                  cutting-edge trends, our curated selection is designed to
+                  elevate every man's wardrobe. From sleek tailored suits to
+                  casual streetwear essentials, we offer versatile pieces that
+                  blend comfort, functionality, and refined craftsmanship.
+                </p>
+                <p>
+                  Explore a range of clothing, shoes, and accessories that
+                  embody confidence and individuality. Whether you're dressing
+                  for a formal occasion or keeping it casual, our collections
+                  are built to help you express your unique style with
+                  sophistication and ease.
+                </p>
+              </div>
+
+              <div class="img-collect">
+                <img src="/content/images/collections.jpeg" alt="" />
+              </div>
+
+              <!-- <button class="shop">SHOP NOW</button> -->
+            </div>
+
+            <div class="flash-sale">
+              <div class="">
+                <h4>Flash Sale</h4>
+                <h6 class="shop">SEE ALL > ></h6>
+              </div>
+              <p>TIME LEFT :</p>
+            </div>
+            <div id="view-section" class="" style="border: 1px solid black">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
+                iure cupiditate facilis. Cupiditate laboriosam recusandae enim
+                ullam quia nulla atque iure inventore? Blanditiis porro
+                obcaecati dolor illum, nulla impedit fuga? Qui, voluptatum?
+                Vero, minus. Maiores libero, ipsam corrupti nam culpa
+                voluptatibus earum quis dolores? Aut animi totam hic laboriosam
+                repellendus autem, cupiditate libero quaerat iste alias sapiente
+                fugiat? Harum, adipisci.
+              </p>
+
+              <button class="shop">SHOP NOW</button>
+            </div>
+
+            <div id="view-section" class="accessories-collect">
+              <div class="img-collect access">
+                <img src="/content/images/accessories_collect.jpg" alt="" />
+              </div>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
+                iure cupiditate facilis. Cupiditate laboriosam recusandae enim
+                ullam quia nulla atque iure inventore? Blanditiis porro
+                obcaecati dolor illum, nulla impedit fuga? Qui, voluptatum?
+                Vero, minus. Maiores libero, ipsam corrupti nam culpa
+                voluptatibus earum quis dolores? Aut animi totam hic laboriosam
+                repellendus autem, cupiditate libero quaerat iste alias sapiente
+                fugiat? Harum, adipisci.
+              </p>
+
+              <button class="shop">SHOP NOW</button>
+            </div>
           </div>
         </div>
         <footer>

@@ -3,6 +3,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  border: none;
+  width: 8px;
+  background-color: rgb(66 66 66);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(141, 135, 135, 0.621);
+  border-radius: 10px;
+}
 .container {
   display: flex;
   /* border: 2px solid black; */
@@ -22,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: none; */
+  display: none;
 }
 .welcome-message {
   /* border: 1px solid green; */
@@ -94,6 +103,20 @@
   border-radius: 10px;
   padding: 5px;
 }
+.sign {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sign .cart {
+  /* border: 1px solid black; */
+  display: none;
+  padding: 5px;
+  border-radius: 6px;
+}
+.sign .count {
+  padding: 3px;
+}
 .sign .reg {
   text-decoration: none;
   color: black;
@@ -111,8 +134,10 @@
   /* gap: 20px; */
   background-color: rgb(38, 33, 33);
   width: 95%;
+  height: 40px;
   margin: 10px auto;
   border-radius: 10px;
+  align-items: center;
 }
 .navBar nav {
   display: flex;
@@ -133,6 +158,15 @@
 nav a {
   text-decoration: none;
   color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 6px;
+  border-radius: 10px;
+}
+nav a:hover {
+  box-shadow: 0 2.5px 5px black;
+  background-color: white;
+  color: black;
 }
 .mainSection {
   display: flex;
@@ -156,6 +190,14 @@ section h2 {
 
   /* text-align: center; */
 }
+.write-up {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 20px;
+  font-family: "Dancing Script", cursive;
+}
 .fashionImg {
   width: 40vw;
   /* height: 200px; */
@@ -165,9 +207,15 @@ section h2 {
 .fashionImg img {
   width: 100%;
 }
+.select {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
 .products {
   display: flex;
   padding: 15px;
+  height: 60vh;
 }
 aside {
   width: 30vw;
@@ -175,7 +223,7 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   padding: 15px;
 }
 aside button {
@@ -196,12 +244,13 @@ aside button:hover {
   color: rgb(56, 50, 50);
 }
 .itemView {
-  padding: 20px;
+  /* padding: 20px; */
   width: 65vw;
   /* border: 1px solid rgb(75, 69, 69); */
   border-radius: 15px;
   /* background-color: white; */
   box-shadow: 0 2.5px 5px black;
+  overflow: auto;
 }
 .clothing,
 .bags,
@@ -209,8 +258,9 @@ aside button:hover {
 .accessories {
   /* visibility: hidden; */
   display: none;
-  height: 50vh;
+  height: 100%;
   overflow: auto;
+  background-color: rgb(213 213 213);
 }
 .item1,
 .item2 {
@@ -226,12 +276,18 @@ aside button:hover {
 .item1 p,
 .item2 p {
   font-weight: bold;
+  font-size: 12px;
 }
 .arrangement {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 30%;
+  background-color: white;
+  /* padding: 10px; */
+}
+.arrangement:hover {
+  box-shadow: 0 2.5px 5px black;
 }
 .arrangement a {
   padding: 15px;
@@ -239,14 +295,15 @@ aside button:hover {
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
   align-items: center;
   text-align: center;
+  font-size: small;
+  height: 100%;
+  justify-content: space-between;
+  gap: 8px;
 }
-.arrangement a:hover {
-  /* padding: 20px; */
+.shadow {
   box-shadow: 0 2.5px 5px black;
-  scale: 1.2;
 }
 .specifications {
   /* border: 1px solid rgb(75, 69, 69); */
@@ -263,6 +320,55 @@ aside button:hover {
 .specifications h4 {
   border-bottom: 1px solid black;
   padding: 5px;
+}
+.view-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* padding: 10px; */
+  /* margin: 20px 0; */
+}
+#view-section {
+  padding: 10px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+#view-section .img-collect {
+  /* border: 1px solid red; */
+  overflow: hidden;
+  width: 100%;
+}
+#view-section .img-collect img {
+  width: 100%;
+}
+#view-section button {
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: orange;
+  color: black;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.flash-sale {
+  background-color: red;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.flash-sale div {
+  display: flex;
+  justify-content: space-between;
+}
+.flash-sale div h6 {
+  cursor: pointer;
 }
 footer {
   display: flex;
@@ -305,10 +411,21 @@ footer a {
 .right {
   display: none;
 }
-/* .scroll-stop {
-  height: 100vh;
-  overflow: hidden;
-} */
+.add-details {
+  /* display: flex;
+  gap: 20px;
+  align-items: center; */
+}
+.add {
+  border: none;
+  width: 100%;
+  color: white;
+  background-color: rgb(240, 157, 3);
+  padding: 3px;
+  /* font-weight: bold; */
+  border-radius: 7px;
+  /* display: none; */
+}
 
 @media (max-width: 850px) {
   .container {
@@ -334,7 +451,7 @@ footer a {
   }
   aside {
     gap: 0;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
   aside button {
     font-size: 25px;
@@ -344,8 +461,8 @@ footer a {
     font-size: 25px;
   }
   .itemView {
-    height: 34vw;
-    overflow: hidden;
+    /* height: 34vw; */
+    /* overflow: hidden; */
   }
 }
 @media (max-width: 770px) {
@@ -398,7 +515,7 @@ footer a {
   }
   .navBar .nav {
     background-color: rgb(45 46 49);
-    width: 60vw;
+    width: 80%;
     height: 100vh;
     flex-direction: column;
     gap: 25px;
@@ -447,6 +564,12 @@ footer a {
   }
   section h2 {
     font-size: 2rem;
+  }
+  .access {
+    height: 50vh;
+  }
+  .access img {
+    height: 100%;
   }
   .fashionImg {
     width: 100%;

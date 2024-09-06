@@ -4,23 +4,24 @@ const shoe = document.querySelector(".shoes");
 const acceSsory = document.querySelector(".accessories");
 const btn = document.querySelectorAll("button");
 const itemView = document.querySelector("main");
-const arrangeValue = document.querySelector(".arrangement");
+const arrangeValue = document.querySelectorAll(".arrangement");
 let toggleBtn = document.querySelector("#toggle"),
   closeNav = document.querySelector(".closeNav"),
   navBar = document.querySelector(".navBar"),
   nav = document.querySelector(".nav");
 
-document.addEventListener("DOMContentLoaded", () => {
-  // document.querySelector(".wrapper").classList.add("scroll-stop");
-  document.querySelector("body").style.overflow = "hidden";
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   if (document.querySelector(".view-section").style.display === "none") {
+//     document.querySelector(".pop-up").style.display = "flex";
+//   }
+//   // document.querySelector("body").style.overflow = "hidden";
+// });
 function eventListeners() {
   document.querySelector(".wlcm-btn").addEventListener("click", openPage);
   toggleBtn.addEventListener("click", navMenu);
 }
 function openPage() {
   document.querySelector(".pop-up").style.display = "none";
-  // document.querySelector(".wrapper").classList.remove("scroll-stop");
   document.querySelector("body").style.overflow = "auto";
 }
 
@@ -70,8 +71,6 @@ btn.forEach((item) => {
       document.querySelector("#accessoryOption").style.color = "black";
     }
   }
-
-  // console.log(item);
 });
 
 const addAction = (item, option) => {
@@ -86,18 +85,54 @@ function navMenu(e) {
   nav.style.left = "0";
   closeNav.style.backgroundColor = "transparent";
   closeNav.style.color = "white";
-  // document.querySelector(".wrapper").classList.add("scroll-stop");
   document.querySelector("body").style.overflow = "hidden";
 }
 
 closeNav.addEventListener("click", () => {
   nav.style.left = "-295px";
   navBar.style.left = "-700px";
-  // document.querySelector(".wrapper").classList.remove("scroll-stop");
   document.querySelector("body").style.overflow = "auto";
 });
 
-// console.log(btn);
-// console.log(itemView.firstElementChild);
+arrangeValue.forEach((item, index) => {
+  // item.addEventListener("mouseenter", (e) => {
+  //   // item.style.border = "1px solid black";
+  //   item.style.scale = "0.5";
+  // });
+  // item.addEventListener("mouseleave", (e) => {
+  //   // item.style.border = "none";
+  //   item.style.scale = "none";
+  // });
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    item.classList.add("shadow");
+    // document.querySelector(".add").style.display = "block";
+    if (item === index) {
+      console.log(item);
+    }
+  });
+});
+
+let addBtn = document.querySelectorAll(".add");
+let btnAdd = Array.from(addBtn);
+let count = document.querySelector(".count");
+let counT = 1;
+btnAdd.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    count.textContent = counT;
+    counT++;
+  });
+});
+
+let shopBtn = document.querySelectorAll(".shop");
+shopBtn.forEach((item) => {
+  item.addEventListener("click", openShop);
+});
+function openShop() {
+  document.querySelector(".pop-up").style.display = "flex";
+  document.querySelector(".select").style.display = "flex";
+  document.querySelector(".view-section").style.display = "none";
+  document.querySelector(".cart").style.display = "block";
+}
 
 eventListeners();
