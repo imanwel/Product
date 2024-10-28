@@ -19,6 +19,7 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 .pop-up {
   /* border: 1px solid red; */
@@ -71,6 +72,7 @@
   flex-direction: column;
   /* gap: 10px; */
   /* width: 100%; */
+  height: 100vh;
 }
 .top {
   display: flex;
@@ -109,7 +111,6 @@
   gap: 10px;
 }
 .sign .cart {
-  /* border: 1px solid black; */
   display: none;
   padding: 5px;
   border-radius: 6px;
@@ -128,6 +129,53 @@
 .sign .reg:hover {
   box-shadow: 0 2.5px 5px black;
   /* scale: 5m; */
+}
+.cart-details {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: fixed;
+  /* top: 140px; */
+  display: none;
+}
+.ct {
+  background-color: white;
+  overflow: hidden;
+  height: 100%;
+}
+.cart-items {
+  /* border: 1px solid black; */
+  padding: 0 30px;
+  overflow: auto;
+  height: 100%;
+}
+.cart-head {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-head button {
+  padding: 5px;
+  font-weight: bold;
+  background-color: transparent;
+  color: red;
+  border: 1px solid black;
+}
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 50px; */
+}
+.lists {
+  /* background-color: white; */
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.w-h {
+  width: 30%;
+  margin: 10px 0;
 }
 .navBar {
   display: flex;
@@ -172,6 +220,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  overflow: auto;
 }
 section {
   display: flex;
@@ -215,7 +264,7 @@ section h2 {
 .products {
   display: flex;
   padding: 15px;
-  height: 100%;
+  height: 55vh;
 }
 aside {
   width: 30vw;
@@ -260,6 +309,9 @@ aside button:hover {
   display: none;
   height: 100%;
   overflow: auto;
+}
+.clothing {
+  /* display: block; */
 }
 .item1,
 .item2 {
@@ -334,6 +386,7 @@ aside button:hover {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  overflow: auto;
 }
 .view-section a {
   text-decoration: none;
@@ -361,7 +414,7 @@ aside button:hover {
   cursor: pointer;
 }
 .flash-sale {
-  background-color: red;
+  background-color: #ff2323;
   color: white;
   width: 100%;
   padding: 10px;

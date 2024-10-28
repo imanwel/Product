@@ -31,40 +31,54 @@
         </div>
       </div>
       <div class="wrapper">
-        <div class="top">
-          <div class="left">
-            <a href="#" id="toggle"><i class="fa-solid fa-bars"></i></a>
-            <div class="unique"><h3>Unique</h3></div>
-          </div>
-          <div class="search">
-            <input type="search" id="search" placeholder="i'm shopping for" />
-          </div>
-          <div class="sign">
-            <div class="cart">
-              <a href="#" class="reg">Cart: <span class="count">0</span></a>
+        <div class="head">
+          <div class="top">
+            <div class="left">
+              <a href="#" id="toggle"><i class="fa-solid fa-bars"></i></a>
+              <div class="unique"><h3>Unique</h3></div>
             </div>
-            <a href="/form.html" class="reg">Login/Register</a>
-            <span class="right">
-              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-              <a href="/form.html" class="regIcon" target="_blank">
-                <i class="fa-solid fa-right-to-bracket"></i>
-              </a>
-            </span>
+            <div class="search">
+              <input type="search" id="search" placeholder="i'm shopping for" />
+            </div>
+            <div class="sign">
+              <div class="cart">
+                <a href="#" class="reg">Cart: <span class="count">0</span></a>
+              </div>
+              <a href="/form.html" class="reg">Login/Register</a>
+              <span class="right">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="/form.html" class="regIcon" target="_blank">
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div class="navBar">
+            <nav class="nav">
+              <div>
+                <span class="i-1"><i class="fa-solid fa-circle-user"></i></span>
+                <button class="closeNav">X</button>
+              </div>
+              <ul>
+                <a href="#" class=""><li>Home</li></a>
+                <a href="#" class=""><li>Services</li></a>
+                <a href="#" class=""><li>About</li></a>
+              </ul>
+            </nav>
           </div>
         </div>
 
-        <div class="navBar">
-          <nav class="nav">
-            <div>
-              <span class="i-1"><i class="fa-solid fa-circle-user"></i></span>
-              <button class="closeNav">X</button>
+        <div class="cart-details">
+          <div class="ct">
+            <div class="cart-head">
+              <h3>Selected items</h3>
+              <button class="closeCart">X</button>
             </div>
-            <ul>
-              <a href="#" class=""><li>Home</li></a>
-              <a href="#" class=""><li>Services</li></a>
-              <a href="#" class=""><li>About</li></a>
-            </ul>
-          </nav>
+            <div class="cart-items">
+              <ol class="cart-list"></ol>
+            </div>
+          </div>
         </div>
 
         <div class="mainSection">
@@ -154,10 +168,7 @@
                     <div class="arrangement">
                       <a href="#" class="joggers">
                         <img src="content/images/clothImg/joggers.jpg" alt="" />
-                        <p>
-                          Sweat Shirt x Joggers
-                          <!--Long Sleeves-->
-                        </p>
+                        <p>Sweat Shirt x Joggers</p>
                         <p><i class="fa-solid fa-naira-sign"></i>27,000</p>
                         <button class="add">ADD TO CART</button>
                       </a>
@@ -296,10 +307,7 @@
                           src="content/images/accessoryImg/watch1.jpg"
                           alt=""
                         />
-                        <p>
-                          Large Dial Quartz Watch
-                          <!--Sports Watch Silicone Strap-->
-                        </p>
+                        <p>Large Dial Quartz Watch</p>
                         <p><i class="fa-solid fa-naira-sign"></i>9,150</p>
                         <button class="add">ADD TO CART</button>
                       </a>
@@ -311,10 +319,7 @@
                           src="content/images/accessoryImg/pendant.jpg"
                           alt=""
                         />
-                        <p>
-                          Smiling Face Pendant Necklace
-                          <!--Titanium Steel-->
-                        </p>
+                        <p>Smiling Face Pendant Necklace</p>
                         <p><i class="fa-solid fa-naira-sign"></i>2,500</p>
                         <button class="add">ADD TO CART</button>
                       </a>
@@ -352,10 +357,7 @@
                           src="content/images/accessoryImg/glass.jpg"
                           alt=""
                         />
-                        <p>
-                          Protective Screen Glasses
-                          <!--Unisex Anti Blue Light-->
-                        </p>
+                        <p>Protective Screen Glasses</p>
                         <p><i class="fa-solid fa-naira-sign"></i>5,000</p>
                         <button class="add">ADD TO CART</button>
                       </a>
@@ -391,7 +393,7 @@
             </div>
           </div>
 
-          <div class="view-section">
+          <!-- <div class="view-section">
             <section>
               <div class="text"><h2>Be elegant with a style</h2></div>
               <div class="fashionImg">
@@ -405,7 +407,7 @@
             <div class="flash-sale">
               <div class="">
                 <h4>Flash Sale</h4>
-                <a href="#"><h6 class="shop">SEE ALL > ></h6></a>
+                <h6 class="shop">SEE ALL > ></h6>
               </div>
               <p>TIME LEFT :</p>
             </div>
@@ -441,40 +443,41 @@
 
               <button class="shop">SHOP NOW</button>
             </div>
-          </div>
-        </div>
-        <footer>
-          <h3>
-            Free Classifieds Online Fashion store in Nigeria | Achieve your
-            desired style on Unique.ng
-          </h3>
-          <p class="note">
-            Unique.ng is an online fashion store website connecting buyers to
-            their desired style with ease. As a buyer all you need to do is to
-            register or sign in with your accurate details and follow the
-            required steps to achieve your fashion dream. At Unique.ng you can
-            buy almost anything and be rest assured of getting what you order
-            100%. Enjoy an amazing online shopping experience online at
-            Unique.ng. Whether you are looking for where to buy clothes, bags,
-            shoes and accessories, we've got you covered but that's not all. You
-            can also order from any part of the country and get delivery at your
-            door-step on Unique.ng. Don't miss out on amazing fashion trends on
-            Unique.ng.
-          </p>
+          </div> -->
 
-          <div class="last">
-            <div class="contact">
-              <a href="#"><p>Contact Us</p></a>
-              <a href="#"><p>About Us</p></a>
-              <a href="#"><p>Terms & Conditions</p></a>
+          <footer>
+            <h3>
+              Free Classifieds Online Fashion store in Nigeria | Achieve your
+              desired style on Unique.ng
+            </h3>
+            <p class="note">
+              Unique.ng is an online fashion store website connecting buyers to
+              their desired style with ease. As a buyer all you need to do is to
+              register or sign in with your accurate details and follow the
+              required steps to achieve your fashion dream. At Unique.ng you can
+              buy almost anything and be rest assured of getting what you order
+              100%. Enjoy an amazing online shopping experience online at
+              Unique.ng. Whether you are looking for where to buy clothes, bags,
+              shoes and accessories, we've got you covered but that's not all.
+              You can also order from any part of the country and get delivery
+              at your door-step on Unique.ng. Don't miss out on amazing fashion
+              trends on Unique.ng.
+            </p>
+
+            <div class="last">
+              <div class="contact">
+                <a href="#"><p>Contact Us</p></a>
+                <a href="#"><p>About Us</p></a>
+                <a href="#"><p>Terms & Conditions</p></a>
+              </div>
+              <div>
+                <a href="#"><p>Privacy policy</p></a>
+                <a href="#"><p>Faq</p></a>
+                <a href="#"><p>Our blog</p></a>
+              </div>
             </div>
-            <div>
-              <a href="#"><p>Privacy policy</p></a>
-              <a href="#"><p>Faq</p></a>
-              <a href="#"><p>Our blog</p></a>
-            </div>
-          </div>
-        </footer>
+          </footer>
+        </div>
       </div>
     </div>
     <script src="content/js/app.js"></script>
